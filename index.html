@@ -4,174 +4,157 @@
 <head>
   <meta charset="UTF-8">
   <title>Pics of me :)</title>
-<!--  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'>
-  <link rel="stylesheet" href="./style.css"> -->
-<style>
-  @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap");
-theme: jekyll-theme-modernist
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-theme: jekyll-theme-modernist
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap");
 
-body {
-  font-family: "Lexend", sans-serif;
-  background-color: #362a2b;
-  color: #e5ebf3;
-}
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-.slider {
-  position: relative;
-  /* position: absolute; */
-  background-size: contain;  /* Use contain to fit the whole image */
-  background-position: center;  /* Center the image */
-  background-repeat: no-repeat;  /* Avoid tiling the image */
-  width: 100vw;
-  height: 100vh;
- <!-- overflow: visible; -->
-}
+    body {
+      font-family: "Lexend", sans-serif;
+      background-color: #362a2b;
+      color: #e5ebf3;
+    }
 
+    .slider {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden; /* Ensure no overflow */
+    }
 
-.slide {
-  position: absolute;
-  background-size: contain;  /* Use contain to fit the whole image */
-  background-position: center;  /* Center the image */
-  background-repeat: no-repeat;  /* Avoid tiling the image */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: opacity 0.4s ease-in-out;
-}
+    .slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: contain;  /* Fit the whole image */
+      background-position: center;  /* Center the image */
+      background-repeat: no-repeat;  /* Avoid tiling the image */
+      opacity: 0;
+      transition: opacity 0.4s ease-in-out;
+    }
 
-.slide.current {
-  opacity: 1;
-}
+    .slide.current {
+      opacity: 1;
+    }
 
+    .slide:nth-child(1) {
+      background-image: url("Pic01.jpeg");
+    }
 
-.slide:first-child {
-background: url("Pic01.jpeg")
-    no-repeat center center/contain;
-}
+    .slide:nth-child(2) {
+      background-image: url("Pic02.jpeg");
+    }
 
-.slide:nth-child(2) {
-background: url("Pic02.jpeg")
-     no-repeat center center/contain;
-}
+    .slide:nth-child(3) {
+      background-image: url("Pic03.jpeg");
+    }
 
-.slide:nth-child(3) {
-  background: url("Pic03.jpeg")
-    no-repeat center center/contain;
-}
+    .slide:nth-child(4) {
+      background-image: url("Pic04.jpeg");
+    }
 
-  .slide:nth-child(4) {
-  background: url("Pic04.jpeg")  
-    no-repeat center center/contain;
-}
-.slide:nth-child(5) {
-  background: url("Pic05.jpg") 
-     no-repeat center center/contain;
-}
-.slide:nth-child(6) {
-  background: url("Pic06.jpeg") 
-     no-repeat center center/contain;
-}
-.slide:nth-child(7) {
-  background: url("Pic07.jpeg") 
-    no-repeat center center/contain;
-}
-.slide:nth-child(8) {
-  background: url("Pic08.jpeg") 
-     no-repeat center center/contain;
-}
-.slide:nth-child(9) {
-  background: url("Pic09.jpg") 
-     no-repeat center center/contain;
-}
-.slide:nth-child(10) {
-  background: url("Pic10.jpg") 
-     no-repeat center center/contain;
-}
-.slide:nth-child(11) {
-  background: url("Pic11.jpg") 
-     no-repeat center center/contain;
-}
-.slide:nth-child(12) {
-  background: url("Pic12.jpg")
-     no-repeat center center/contain;
-}
-.slide:nth-child(13) {
-  background: url("Pic13.jpg")
-   no-repeat center center/contain;
-}
-.slide:nth-child(14) {
-  background: url("Pic14.JPG") 
-     no-repeat center center/contain;
-}
-.slide:nth-child(15) {
-  background: url("Pic15.JPG") 
-     no-repeat center center/contain;
-}
+    .slide:nth-child(5) {
+      background-image: url("Pic05.jpg");
+    }
 
-.slide:nth-child(16) {
-  background: url("Pic16.jpg") 
-     no-repeat center center/contain;
-}
+    .slide:nth-child(6) {
+      background-image: url("Pic06.jpeg");
+    }
 
+    .slide:nth-child(7) {
+      background-image: url("Pic07.jpeg");
+    }
 
-.buttons button#prev {
-  position: absolute;
-  top: 50%;
-  left: 1rem;
-}
+    .slide:nth-child(8) {
+      background-image: url("Pic08.jpeg");
+    }
 
-.buttons button#next {
-  position: absolute;
-  top: 50%;
-  right: 1rem;
-}
+    .slide:nth-child(9) {
+      background-image: url("Pic09.jpg");
+    }
 
-.buttons button {
-  border: 2px solid #e5ebf3;
-  background-color: transparent;
-  color: #e5ebf3;
-  cursor: pointer;
-  padding: 13px 15px;
-  border-radius: 50%;
-  outline: none;
-}
+    .slide:nth-child(10) {
+      background-image: url("Pic10.jpg");
+    }
 
-.buttons button:hover {
-  background-color: #e5ebf3;
-  color: #362a2b;
-}
+    .slide:nth-child(11) {
+      background-image: url("Pic11.jpg");
+    }
 
-@media (max-width: 300px) and (min-height: 640px)
-  {
-  .slide .content {
-    bottom: 70px;
-    left: -600px;
-    width: 300px;
-    padding: 2rem;
-    line-height: 1.6;
-  }
+    .slide:nth-child(12) {
+      background-image: url("Pic12.jpg");
+    }
 
-  .slide .content h1 {
-    font-size: 2rem;
-  }
+    .slide:nth-child(13) {
+      background-image: url("Pic13.jpg");
+    }
 
-  .slide.current .content {
-    transform: translateX(600px);
-  }
-}
-</style>
+    .slide:nth-child(14) {
+      background-image: url("Pic14.JPG");
+    }
+
+    .slide:nth-child(15) {
+      background-image: url("Pic15.JPG");
+    }
+
+    .slide:nth-child(16) {
+      background-image: url("Pic16.jpg");
+    }
+
+    .buttons button#prev {
+      position: absolute;
+      top: 50%;
+      left: 1rem;
+    }
+
+    .buttons button#next {
+      position: absolute;
+      top: 50%;
+      right: 1rem;
+    }
+
+    .buttons button {
+      border: 2px solid #e5ebf3;
+      background-color: transparent;
+      color: #e5ebf3;
+      cursor: pointer;
+      padding: 13px 15px;
+      border-radius: 50%;
+      outline: none;
+    }
+
+    .buttons button:hover {
+      background-color: #e5ebf3;
+      color: #362a2b;
+    }
+
+    @media (max-width: 300px) and (min-height: 640px) {
+      .slide .content {
+        bottom: 70px;
+        left: -600px;
+        width: 300px;
+        padding: 2rem;
+        line-height: 1.6;
+      }
+
+      .slide .content h1 {
+        font-size: 2rem;
+      }
+
+      .slide.current .content {
+        transform: translateX(600px);
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <!-- partial:index.partial.html -->
   <div class="slider">
     <div class="slide current"></div>
     <div class="slide"></div>
@@ -190,12 +173,12 @@ background: url("Pic02.jpeg")
     <div class="slide"></div>
     <div class="slide"></div>
   </div>
-  
+
   <div class="buttons">
     <button id="prev"><i class="fas fa-arrow-left"></i></button>
     <button id="next"><i class="fas fa-arrow-right"></i></button>
   </div>
-  <!-- partial -->
+
   <script>
     const slides = document.querySelectorAll(".slide");
     const nextButton = document.getElementById("next");
@@ -231,6 +214,7 @@ background: url("Pic02.jpeg")
         slideInterval = setInterval(nextSlide, intervalTime);
       }
     });
+
     prevButton.addEventListener("click", () => {
       prevSlide();
       if (auto) {
@@ -242,7 +226,6 @@ background: url("Pic02.jpeg")
     if (auto) {
       slideInterval = setInterval(nextSlide, intervalTime);
     }
-
   </script>
 
 </body>
