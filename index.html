@@ -109,19 +109,22 @@
       background-image: url("Pic16.jpg");
     }
 
-   .caption {
+  .caption {
   position: absolute;
-bottom: 15px;
+  bottom: 20px; /* Distance from the bottom of the slide */
   left: 50%;
-  width: 50%
   transform: translateX(-50%);
-  background-color: rgba(54, 42, 43, 0.7); /* semi-transparent background */
+  width: 80%; /* Set width relative to the slide */
+  max-height: 15%; /* Optional: limit the height */
+  background-color: rgba(54, 42, 43, 0.7); /* Semi-transparent background */
   color: #e5ebf3;
-  /*font: "Lexend"; */
-  padding: 10px;
+  padding: 10px; /* Space inside the caption */
   border-radius: 5px;
-  /*font-size: 1.5rem;  Increase this value for larger text */
+  font-size: 1.5rem; /* Increase text size if needed */
+  text-align: center; /* Center text inside the caption */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Optional: add shadow for depth */
 }
+
 
     .buttons button#prev {
       position: absolute;
